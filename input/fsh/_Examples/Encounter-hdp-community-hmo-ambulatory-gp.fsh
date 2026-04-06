@@ -9,9 +9,9 @@ Usage: #example
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #encounterInformation
-* meta.security[HDP].display = "Encounter information"
+* meta.security[HDP].display = "ביקורים"
 
-* identifier[+].system = "http://hmo1.example.org/encounters"
+* identifier[+].system = "http://hmo1.check.org/encounters"
 * identifier[=].value = "HMO1-GP-2024-0001"
 
 * status = #finished
@@ -40,7 +40,7 @@ Usage: #example
 * location[+].location.display = "HMO1 GP Clinic"
 * location[=].status = #completed
 
-* reasonCode[+] = $sct#185349003 "Encounter for check-up"
+* reasonCode[+] = $sct#185349003 "Encounter for check up (procedure)"
 * reasonReference[+].reference = "Condition/type-1-diabetes"
 * reasonReference[=].display = "Type 1 Diabetes"
 * reasonReference[patient-reported-chief-complaint].reference = "Observation/hdp-chief-complaint-gp-visit"

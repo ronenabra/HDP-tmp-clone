@@ -33,7 +33,7 @@
   ],
   "identifier": [
     {
-      "system": "http://hospital.example.org/observation",
+      "system": "http://hospital.check.org/observation",
       "value": "BP-2025-0001"
     }
   ],

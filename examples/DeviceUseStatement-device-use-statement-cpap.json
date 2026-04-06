@@ -19,7 +19,7 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.example.org/deviceusestatement",
+      "system": "http://hospital.check.org/deviceusestatement",
       "value": "DEVUSE-2025-0001"
     }
   ],

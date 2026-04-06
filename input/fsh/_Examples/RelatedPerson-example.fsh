@@ -11,9 +11,10 @@ Description: "An example instance of the ILCore RelatedPerson profile."
 * active = true
 * patient = Reference(patient-with-israeli-id)
 * relationship[0].coding[0] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#GUARD "Guardian"
-* name[0].family = "Doe"
-* name[0].given[0] = "John"
-* name[0].use = #official
+* name[English].family = "Nice"
+* name[English].given[+] = "Somebody"
+* name[English].use[+] = #official
+* name[English].extension[language].valueCode = #en
 * telecom[0].system = #phone
 * telecom[0].value = "+1-555-555-5555"
 * telecom[0].use = #mobile

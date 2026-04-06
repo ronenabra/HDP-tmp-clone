@@ -8,17 +8,19 @@ Description: "Israel HDP constraints and metadata tags for EpisodeOfCare"
 * insert ConformanceMetadata
 * ^status = #draft
 
-* insert HDPInformationBucketSecurity
-* meta.security[HDP].code = $info-buckets#encounterInformation
+* meta only ILHDPMeta
+* meta 1..1
+* meta.security[HDP].system = $info-buckets (exactly)
+* meta.security[HDP].code = #encounterInformation (exactly)
+* meta.security[HDP].display = "ביקורים" (exactly)
 * identifier 1..*
-//----- added for testing. will leave if fixes problem
-* type ^slicing.discriminator.type = #pattern
-* type ^slicing.discriminator.path = "$this"
-* type ^slicing.rules = #open
-* type contains recurring-daily-hospitalization 0..1 and serviceType 0..1
+// * type ^slicing.discriminator.type = #pattern
+// * type ^slicing.discriminator.path = "$this"
+// * type ^slicing.rules = #open
+// * type contains recurring-daily-hospitalization 0..1 and serviceType 0..*
 * type[recurring-daily-hospitalization] ^patternCodeableConcept.coding.system = "http://fhir.health.gov.il/cs/il-core-episode-of-care-type"
 * type[recurring-daily-hospitalization] ^patternCodeableConcept.coding.code = #recurring-daily-hospitalization
-* type[serviceType] from http://fhir.health.gov.il/ValueSet/il-core-service-type (extensible)
+* type[serviceType] from http://fhir.health.gov.il/ValueSet/il-core-service-type (required)
 * type[serviceType] ^short = "Service type for the episode of care"
 * type[serviceType] ^definition = "Service type/specialty context for the episode, analogous to Encounter.serviceType."
 //-----

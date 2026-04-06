@@ -10,12 +10,12 @@ Usage: #example
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #encounterInformation
 
-* identifier[+].system = "http://hospital1.example.org/encounters"
+* identifier[+].system = "http://hospital1.check.org/encounters"
 * identifier[=].value = "HOSP1-WARDA-ADM-2024-0001"
 
 * status = #finished
 * class = $v3-ActCode#IMP "inpatient encounter"
-* type[supplemental-encounter].coding[+] = $il-core-encounter-type#supplemental-encounter-hdp "Supplemental encounter (HDP encounter type)"
+* type[supplemental-encounter].coding[+] = $il-core-encounter-type#supplemental-encounter-hdp "An Encounter shared in addition to the standard HDP encounter structure, representing local/native sub-encounters or other details"
 * serviceType = $sct#700232004 "General medical service"
 
 * subject.reference = "Patient/il-hdp-patient"

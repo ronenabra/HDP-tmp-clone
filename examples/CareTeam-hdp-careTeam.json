@@ -2,17 +2,31 @@
   "resourceType": "CareTeam",
   "id": "hdp-careTeam",
   "meta": {
-      "security":  [
-          {
-              "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
-              "code": "practitioner",
-              "display": "מטפל"
-          }
-      ],
-      "profile":  [
-          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-care-team"
-      ]
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-care-team"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "practitioner",
+        "display": "מטפל"
+      }
+    ]
   },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      },
+      "system": "http://goodcare.org/careteams/id",
+      "value": "12345"
+    }
+  ],
   "contained": [
     {
       "resourceType": "Practitioner",
@@ -30,20 +44,20 @@
       ],
       "name": [
         {
-          "family": "Dietician",
           "given": [
             "Dorothy"
-          ]
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/language",
+              "valueCode": "en"
+            }
+          ],
+          "family": "Dietician"
         }
       ]
     }
   ],
-  "identifier": [
-    {
-      "value": "12345"
-    }
-  ],
-  "status": "active",
   "category": [
     {
       "coding": [
@@ -55,14 +69,6 @@
       ]
     }
   ],
-  "name": "Peter James Charlmers Care Plan for Inpatient Encounter",
-  "subject": {
-    "reference": "Patient/patient-immigrant",
-    "display": "הרצל לוי"
-  },
-  "encounter": {
-    "reference": "Encounter/community-consultation"
-  },
   "period": {
     "end": "2013-01-01"
   },
@@ -74,8 +80,7 @@
         }
       ],
       "member": {
-        "reference": "Patient/patient-immigrant",
-        "display": "Peter James Chalmers"
+        "reference": "Patient/patient-immigrant"
       }
     },
     {
@@ -84,15 +89,14 @@
           "text": "adviser"
         }
       ],
+      "period": {
+        "end": "2013-01-01"
+      },
       "member": {
-        "reference": "#pr1",
-        "display": "Dorothy Dietition"
+        "reference": "#pr1"
       },
       "onBehalfOf": {
         "reference": "Organization/meir-hospital"
-      },
-      "period": {
-        "end": "2013-01-01"
       }
     }
   ],
@@ -100,5 +104,13 @@
     {
       "reference": "Organization/meir-hospital"
     }
-  ]
+  ],
+  "status": "active",
+  "name": "Peter James Charlmers Care Plan for Inpatient Encounter",
+  "subject": {
+    "reference": "Patient/patient-immigrant"
+  },
+  "encounter": {
+    "reference": "Encounter/community-consultation"
+  }
 }

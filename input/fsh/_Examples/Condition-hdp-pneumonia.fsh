@@ -1,7 +1,7 @@
 Instance: hdp-pneumonia
 InstanceOf: ILHDPCondition
 Title: "HDP Condition - Community Acquired Pneumonia"
-Description: "Primary admission diagnosis for the hospitalization example."
+Description: "Primary admission diagnosis for the hospitalization check."
 Usage: #example
 
 * text.status = #generated
@@ -10,7 +10,7 @@ Usage: #example
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #diagnoses
 
-* identifier[+].system = "http://hospital1.example.org/conditions"
+* identifier[+].system = "http://hospital1.check.org/conditions"
 * identifier[=].value = "HOSP1-COND-0001"
 * recordedDate = "2024-11-28"
 

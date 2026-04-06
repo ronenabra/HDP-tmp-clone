@@ -1,0 +1,143 @@
+{
+  "resourceType": "Encounter",
+  "id": "hdp-community-hmo-ambulatory-gp-visit",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "encounterInformation",
+        "display": "ביקורים"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Encounter:</b> HMO GP visit (community/ambulatory).</p><p>Patient is seen by their GP at an HMO clinic for routine follow-up. The encounter is a short, face-to-face visit in the community setting.</p><p>Type is fixed to the HDP community/HMO ambulatory code; Reason and diagnosis reference existing condition resources.</p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hmo1.check.org/encounters",
+      "value": "HMO1-GP-2024-0001"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-encounter-type",
+          "code": "community-hmo-ambulatory-hdp",
+          "display": "Community/HMO ambulatory encounter (HDP encounter type)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "1258986006",
+          "display": "Face-to-face encounter"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/il-hdp-patient",
+    "display": "ILHDP Patient"
+  },
+  "participant": [
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "PPRF",
+              "display": "primary performer"
+            }
+          ]
+        }
+      ],
+      "individual": {
+        "reference": "Practitioner/practitioner-md",
+        "display": "Dr. Greenfeld Diana"
+      }
+    }
+  ],
+  "period": {
+    "start": "2024-11-28T09:30:00+02:00",
+    "end": "2024-11-28T09:50:00+02:00"
+  },
+  "serviceProvider": {
+    "identifier": {
+      "system": "http://fhir.health.gov.il/identifier/legal-entity",
+      "value": "515555555"
+    },
+    "reference": "Organization/HMO1",
+    "display": "HMO1"
+  },
+  "location": [
+    {
+      "location": {
+        "display": "HMO1 GP Clinic"
+      },
+      "status": "completed"
+    }
+  ],
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "185349003",
+          "system": "http://snomed.info/sct",
+          "display": "Encounter for check up (procedure)"
+        }
+      ]
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/type-1-diabetes",
+      "display": "Type 1 Diabetes"
+    },
+    {
+      "reference": "Observation/hdp-chief-complaint-gp-visit",
+      "display": "Patient-reported chief complaint"
+    }
+  ],
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/type-1-diabetes",
+        "display": "Type 1 Diabetes"
+      },
+      "use": {
+        "coding": [
+          {
+            "code": "primary-diagnosis",
+            "system": "http://fhir.health.gov.il/cs/il-core-diagnosis-role",
+            "display": "Primary diagnosis"
+          }
+        ]
+      },
+      "rank": 1
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "code": "COMMUNITY-OR-HMO",
+    "system": "http://fhir.health.gov.il/cs/il-core-encounter-class",
+    "display": "Community Care/HMO setting"
+  },
+  "serviceType": {
+    "coding": [
+      {
+        "code": "700232004",
+        "system": "http://snomed.info/sct",
+        "display": "General medical service"
+      }
+    ]
+  }
+}

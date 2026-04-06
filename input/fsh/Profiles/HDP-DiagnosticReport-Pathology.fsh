@@ -9,11 +9,10 @@ Description: "DiagnosticReport-Pathology profile for HDP"
 * meta 1..1
 * meta.security ^slicing.discriminator.type = #value
 * meta.security ^slicing.discriminator.path = "system"
-* meta.security ^slicing.rules = #closed
+* meta.security ^slicing.rules = #open
 * meta.security ^slicing.description = "ILHDP codes only"
 * meta.security contains HDP 1..1
-* meta.security[HDP].system 1..1
-* meta.security[HDP].code 1..1
+
 * meta.security[HDP].system = $info-buckets (exactly)
 * meta.security[HDP].code = #pathology (exactly)
 * meta.security[HDP].display = "פתולוגיה" (exactly)

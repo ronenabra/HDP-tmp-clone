@@ -10,14 +10,14 @@ Usage: #example
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #measurements
 
-* identifier[+].system = "http://hospital1.example.org/observations"
+* identifier[+].system = "http://hospital1.check.org/observations"
 * identifier[=].value = "HOSP1-VS-BP-2024-0001"
 
 * extension[+].url = $ext-resource-role-context
 * extension[=].extension[+].url = "role"
 * extension[=].extension[=].valueCodeableConcept = $il-core-resource-role-context#AD
 * extension[=].extension[+].url = "roleOperationalContext"
-* extension[=].extension[=].valueIdentifier.system = "http://hospital1.example.org/emr-sheet-id"
+* extension[=].extension[=].valueIdentifier.system = "http://hospital1.check.org/emr-sheet-id"
 * extension[=].extension[=].valueIdentifier.value = "2f3a1d7e-9e38-4d47-9f49-0a7a59b7d04e"
 * extension[=].extension[+].url = "roleEncounterContext"
 * extension[=].extension[=].valueReference = Reference(Encounter/hdp-supplemental-admission-ward-a)

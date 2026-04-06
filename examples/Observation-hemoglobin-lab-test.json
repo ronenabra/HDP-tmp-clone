@@ -5,14 +5,21 @@
     "security": [
       {
         "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
-        "code": "assessments",
-        "display": "אומדנים"
+        "code": "laboratoryTests",
+        "display": "בדיקות מעבדה"
       }
     ],
     "profile": [
       "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-observation-lab"
     ]
   },
+  "identifier": [
+    {
+      "id": "hemoglobin-lab-test",
+      "value": "LAB-2024-0002",
+      "system": "http://goodcare.org/lab-test/id"
+    }
+  ],
   "category": [
     {
       "coding": [
@@ -43,9 +50,6 @@
   "performer": [
     {
       "reference": "Practitioner/practitioner-nurse-no-expertise-with-advanced-courses"
-    },
-    {
-      "reference": "Organization/hospital-department"
     }
   ],
   "interpretation": [

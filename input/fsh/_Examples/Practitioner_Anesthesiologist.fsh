@@ -10,16 +10,16 @@ Usage: #example
 * identifier[enc-il-id].system = "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh"
 * identifier[enc-il-id].value = "gH45*&@1a"
 * active = true
-* name.prefix = "דר'"
-* name.family = "ברקוביץ"
-* name.given = "ליאת"
-* name.text = "דר' ליאת ברקוביץ"
-* name.extension[language].valueCode = #he
+* name[Hebrew].prefix = "דר'"
+* name[Hebrew].family = "ברקוביץ"
+* name[Hebrew].given = "ליאת"
+* name[Hebrew].text = "דר' ליאת ברקוביץ"
+* name[Hebrew].extension[language].valueCode = #he
 * telecom[0].system = #phone
 * telecom[0].value = "04-6421420"
 * telecom[0].use = #work
 * telecom[1].system = #email
-* telecom[1].value = "DG@example.com"
+* telecom[1].value = "DG@check.com"
 * gender = #female
 * birthDate = "1977-04-01"
 

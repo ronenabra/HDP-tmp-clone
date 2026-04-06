@@ -19,7 +19,7 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.example.org/substances",
+      "system": "http://hospital.check.org/substances",
       "value": "SUB-2025-0002"
     }
   ],
@@ -27,8 +27,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "119297000",
-        "display": "Blood specimen (substance)"
+        "code": "87612001",
+        "display": "Blood (substance)"
       }
     ]
   },

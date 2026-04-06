@@ -45,9 +45,10 @@
     "start": "2022-10-05",
     "end": "2022-10-10"
   },
-  "identifier": [
+"identifier": [
     {
-      "id": "med-admin"
+      "system": "http://hospital.check.org/medication-administrations",
+      "value": "MA-2025-0001"
     }
   ],
   "performer": [

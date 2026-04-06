@@ -5,12 +5,12 @@
     "security": [
       {
         "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
-        "code": "laboratory",
-        "display": "מעבדה"
+        "code": "laboratoryTests",
+        "display": "בדיקות מעבדה"
       }
     ],
     "profile": [
-      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-observation"
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-observation-lab"
     ]
   },
   "text": {
@@ -19,7 +19,7 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.example.org/observations",
+      "system": "http://hospital.hospitaliala.org/observations",
       "value": "OBS-2025-0001"
     }
   ],

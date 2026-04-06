@@ -9,9 +9,9 @@ Usage: #example
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #organization
-* meta.security[HDP].display = "Organization"
+* meta.security[HDP].display = "יחידה ארגונית"
 
-* identifier[+].system = "http://hospital1.example.org/locations"
+* identifier[+].system = "http://hospital1.check.org/locations"
 * identifier[=].value = "HOSP1-ER-NU"
 
 * status = #active
@@ -19,3 +19,4 @@ Usage: #example
 * type = $il-core-hospital-nursing-unit#il-core-hospital-nursing-unit "Hospital nursing unit"
 * mode = #instance
 * managingOrganization.reference = "Organization/hospital1-er"
+* address.line[+] = "Rambam Hospital, Haifa"

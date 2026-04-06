@@ -1,7 +1,9 @@
 RuleSet: ILHDPEncounterCommon
-* insert HDPInformationBucketSecurity
-* meta.security[HDP].code = $info-buckets#encounterInformation
-
+* meta only ILHDPMeta
+* meta.security[HDP].system = $info-buckets (exactly)
+* meta.security[HDP].code = #encounterInformation (exactly)
+* meta.security[HDP].display = "ביקורים" (exactly)
+// * meta.security[HDP] = $info-buckets#encounterInformation "ביקורים" (exactly)
 * obeys ilhdp-enc-reason
 * obeys ilhdp-enc-face-to-face-exclusive
 
@@ -73,12 +75,17 @@ RuleSet: ILHDPEncounterCommon
 * diagnosis.use ^comment = "SHOULD be used to indicate diagnosis role (i.e. - chief complaint, comorbidity, etc.)"
 * diagnosis.rank ^comment = "SHOULD be used to indicate relative rank of diagnosis within each role (use)"
 
-* location ^slicing.discriminator.type = #profile
-* location ^slicing.discriminator.path = "location"
+* location ^slicing.discriminator.type = #value
+* location ^slicing.discriminator.path = "physicalType.coding.code"
 * location ^slicing.rules = #open
 * location contains nursing-unit 0..*
 * location[nursing-unit] ^short = "Nursing unit location"
 * location[nursing-unit] ^definition = "Nursing unit/ward location for the encounter."
+// * location[nursing-unit].physicalType ^patternCoding.system = $il-core-location-physical-type
+// * location[nursing-unit].physicalType ^patternCoding.code = #hospital-nursing-unit
+* location[nursing-unit].physicalType.coding.code = #hospital-nursing-unit (exactly)
+// * location[nursing-unit].physicalType.coding.system = $il-core-location-physical-type
+// * location[nursing-unit].physicalType.coding.code = #hospital-nursing-unit
 * location[nursing-unit].location only Reference(ILCoreLocationNursingUnit or ILHDPLocationNursingUnit)
 
 * identifier ^alias[0] = "מזהה ביקור"

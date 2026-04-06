@@ -8,7 +8,8 @@ Description: "HDP wrapper for nursing unit locations with security tagging"
 * insert ConformanceMetadata
 * ^status = #draft
 
-* insert HDPInformationBucketSecurity
+* meta only ILHDPMeta
+* meta 1..1
 * identifier 1..*
 
 * managingOrganization only Reference($ILOrganization or $ILHDPOrganization)

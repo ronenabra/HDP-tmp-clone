@@ -36,5 +36,8 @@ Usage: #inline
 * meta.profile = "http://fhir.health.gov.il/StructureDefinition/il-core-practitioner"
 * identifier.system = "http://practitioners.health.gov.il/Practitioners"
 * identifier.value = "1-1234"
-* name.family = "Dietician"
-* name.given = "Dorothy"
+
+* name[English].family = "Dietician"
+* name[English].given[+] = "Dorothy"
+* name[English].prefix[+] = "Ms."
+* name[English].extension[language].valueCode = #en

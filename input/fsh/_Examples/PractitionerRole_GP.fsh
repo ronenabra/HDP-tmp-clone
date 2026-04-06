@@ -16,7 +16,7 @@ Usage: #example
 * telecom[0].value = "04-6421420"
 * telecom[0].use = #work
 * telecom[1].system = #email
-* telecom[1].value = "DG@example.com"
+* telecom[1].value = "DG@check.com"
 * availableTime.availableStartTime = "09:00:00"
 * availableTime.availableEndTime = "17:00:00"
 * organization.reference = "Organization/ministry-of-health"

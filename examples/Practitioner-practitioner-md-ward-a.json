@@ -1,0 +1,48 @@
+{
+  "resourceType": "Practitioner",
+  "id": "practitioner-md-ward-a",
+  "meta": {
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-practitioner"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "practitioner",
+        "display": "מטפל"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Cohen Yael</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://practitioners.health.gov.il/Practitioners",
+      "value": "1-12345"
+    },
+    {
+      "system": "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh",
+      "value": "gj45*&@1a"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Yael"
+      ],
+      "prefix": [
+        "Dr."
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "en"
+        }
+      ],
+      "family": "Cohen"
+    }
+  ],
+  "active": true
+}

@@ -1,0 +1,132 @@
+{
+  "resourceType": "EpisodeOfCare",
+  "id": "hdp-recurring-daily-hospitalization-program1",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "encounterInformation",
+        "display": "ביקורים"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-episode-of-care-recurring-daily-hospitalization"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>EpisodeOfCare:</b> Recurring day-hospitalization program with repeated daily treatment sessions.</p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital1.check.org/episodes",
+      "value": "HOSP1-RDH-2024-0001"
+    }
+  ],
+  "statusHistory": [
+    {
+      "period": {
+        "start": "2024-10-01",
+        "end": "2024-12-31"
+      },
+      "status": "active"
+    },
+    {
+      "period": {
+        "start": "2024-12-31",
+        "end": "2024-12-31"
+      },
+      "status": "finished"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-episode-of-care-type",
+          "code": "recurring-daily-hospitalization",
+          "display": "Recurring daily hospitalization"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-service-type",
+          "_code": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/il-hdp-patient",
+    "display": "ILHDP Patient"
+  },
+  "managingOrganization": {
+    "reference": "Organization/hospital1-ward-a",
+    "display": "Hospital1 Internal Ward A"
+  },
+  "period": {
+    "start": "2024-10-01",
+    "end": "2024-12-31"
+  },
+  "careManager": {
+    "reference": "Practitioner/practitioner-md-ward-a",
+    "display": "Dr. Cohen Yael"
+  },
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/hdp-pneumonia",
+        "display": "Community acquired pneumonia"
+      },
+      "role": {
+        "coding": [
+          {
+            "code": "AD",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+          }
+        ]
+      },
+      "rank": 1
+    },
+    {
+      "condition": {
+        "reference": "Condition/hdp-type-2-diabetes",
+        "display": "Type 2 diabetes mellitus"
+      },
+      "role": {
+        "coding": [
+          {
+            "code": "CM",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+          }
+        ]
+      },
+      "rank": 1
+    },
+    {
+      "condition": {
+        "reference": "Condition/hdp-pneumonia",
+        "display": "Community acquired pneumonia"
+      },
+      "role": {
+        "coding": [
+          {
+            "code": "DD",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+          }
+        ]
+      },
+      "rank": 1
+    }
+  ],
+  "status": "finished"
+}

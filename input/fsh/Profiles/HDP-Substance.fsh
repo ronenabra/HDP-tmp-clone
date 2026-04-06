@@ -9,7 +9,6 @@ Description: "Substance profile for HDP"
 * meta 1..1
 // * meta.security contains HDP 1..1
 * meta.security[HDP] from $vs-substance-meta (required)
-* meta.security[HDP].system 1..1
-* meta.security[HDP].code 1..1
+
 * meta.security[HDP].system = $info-buckets (exactly)
 * identifier 1..*

@@ -7,12 +7,7 @@ Description: "Vital Signs profile for HDP compliance."
 * . obeys one-strong-identifier
 * meta only ILHDPMeta
 * meta 1..1
-* meta.security ^slicing.discriminator.type = #value
-* meta.security ^slicing.discriminator.path = "system"
-* meta.security ^slicing.rules = #closed
-* meta.security ^slicing.description = "ILHDP codes only"
-* meta.security[HDP].system 1..1
-* meta.security[HDP].code 1..1
+
 * meta.security[HDP].system = $info-buckets (exactly)
 * meta.security[HDP].code = #measurements (exactly)
 * meta.security[HDP].display = "מדדים" (exactly)

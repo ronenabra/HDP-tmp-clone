@@ -19,8 +19,8 @@
   },
   "identifier": [
     {
-      "system": "http://practitioners.health.gov.il/Practitioners",
-      "value": "1-1234"
+      "system": "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh",
+      "value": "gH45*&@1a"
     }
   ],
   "name": [
@@ -49,7 +49,7 @@
     },
     {
       "system": "email",
-      "value": "DG@example.com"
+      "value": "DG@check.com"
     }
   ],
   "qualification": [

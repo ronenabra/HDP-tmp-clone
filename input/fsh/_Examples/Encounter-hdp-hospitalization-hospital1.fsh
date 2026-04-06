@@ -9,9 +9,9 @@ Usage: #example
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #encounterInformation
-* meta.security[HDP].display = "Encounter information"
+* meta.security[HDP].display = "ביקורים"
 
-* identifier[+].system = "http://hospital1.example.org/encounters"
+* identifier[+].system = "http://hospital1.check.org/encounters"
 * identifier[=].value = "HOSP1-ADM-2024-0001"
 
 * status = #finished
@@ -71,6 +71,15 @@ Usage: #example
 
 * serviceProvider.reference = "Organization/hospital1"
 * serviceProvider.display = "Hospital1"
+
+* location[+].location.reference = "Location/hospital1-main-campus"
+* location[=].location.display = "Hospital1 Main Campus"
+* location[=].status = #completed
+* location[=].period.start = "2024-11-28T08:15:00+02:00"
+* location[=].period.end = "2024-12-02T14:00:00+02:00"
+* location[=].physicalType.coding[+].system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
+* location[=].physicalType.coding[=].code = #si
+* location[=].physicalType.coding[=].display = "Site"
 
 * reasonCode[+] = $patient-visit-reason-moh#10 "מחלה"
 * reasonReference[+].reference = "Condition/hdp-pneumonia"

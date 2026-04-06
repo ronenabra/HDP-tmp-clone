@@ -9,9 +9,9 @@ Usage: #example
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #encounterInformation
-* meta.security[HDP].display = "Encounter information"
+* meta.security[HDP].display = "ביקורים"
 
-* identifier[+].system = "http://hospital1.example.org/encounters"
+* identifier[+].system = "http://hospital1.check.org/encounters"
 * identifier[=].value = "HOSP1-WARDA-2024-0001"
 
 * status = #finished
@@ -58,11 +58,17 @@ Usage: #example
 * location[=].status = #completed
 * location[=].period.start = "2024-11-28T15:30:00+02:00"
 * location[=].period.end = "2024-11-30T09:00:00+02:00"
+* location[=].physicalType.coding[+].system = $il-core-location-physical-type
+* location[=].physicalType.coding[=].code = #hospital-nursing-unit
+* location[=].physicalType.coding[=].display = "Hospital nursing unit"
 * location[+].location.reference = "Location/hospital1-ward-b-nu1"
 * location[=].location.display = "Hospital1 Ward B Nursing Unit 1"
 * location[=].status = #completed
 * location[=].period.start = "2024-11-30T09:00:00+02:00"
 * location[=].period.end = "2024-12-02T12:00:00+02:00"
+* location[=].physicalType.coding[+].system = $il-core-location-physical-type
+* location[=].physicalType.coding[=].code = #hospital-nursing-unit
+* location[=].physicalType.coding[=].display = "Hospital nursing unit"
 //physical bed locations
 * location[+].location.reference = "Location/hospital1-ward-a-room-12-bed-2"
 * location[=].location.display = "Ward A Room 12 Bed 2"

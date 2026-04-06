@@ -1,0 +1,129 @@
+{
+  "resourceType": "Observation",
+  "id": "hdp-bp-admission-ward-a",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "measurements"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-bp"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Admission Vital Signs:</b> Blood pressure measured on admission to Ward A. Linked to the Ward A segment encounter and the admission supplemental encounter for operational context.</p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital1.check.org/observations",
+      "value": "HOSP1-VS-BP-2024-0001"
+    }
+  ],
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "role",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "AD",
+                "system": "http://fhir.health.gov.il/cs/il-core-resource-role-context"
+              }
+            ]
+          }
+        },
+        {
+          "valueIdentifier": {
+            "system": "http://hospital1.check.org/emr-sheet-id",
+            "value": "2f3a1d7e-9e38-4d47-9f49-0a7a59b7d04e"
+          },
+          "url": "roleOperationalContext"
+        },
+        {
+          "valueReference": {
+            "reference": "Encounter/hdp-supplemental-admission-ward-a",
+            "display": "Ward A Admission Supplemental Encounter"
+          },
+          "url": "roleEncounterContext"
+        }
+      ],
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-resource-role-context"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/il-hdp-patient",
+    "display": "HDP Patient with Israeli ID"
+  },
+  "encounter": {
+    "reference": "Encounter/hdp-segment-ward-a",
+    "display": "Ward A Inpatient Care Segment"
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-nurse",
+      "display": "Registered Nurse"
+    }
+  ],
+  "component": [
+    {
+      "valueQuantity": {
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]",
+        "value": 135,
+        "unit": "mmHg"
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8480-6",
+            "display": "Systolic blood pressure"
+          }
+        ]
+      }
+    },
+    {
+      "valueQuantity": {
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]",
+        "value": 82,
+        "unit": "mmHg"
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8462-4",
+            "display": "Diastolic blood pressure"
+          }
+        ]
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "85354-9",
+        "display": "Blood pressure panel with all children optional"
+      }
+    ]
+  },
+  "status": "final",
+  "effectiveDateTime": "2024-11-28T15:40:00+02:00"
+}

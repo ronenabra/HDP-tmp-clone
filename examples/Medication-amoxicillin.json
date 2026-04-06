@@ -19,7 +19,7 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.example.org/medications",
+      "system": "http://hospital.check.org/medications",
       "value": "MED-2025-0001",
       "assigner": {
         "reference": "Organization/example"
@@ -38,9 +38,9 @@
   "form": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/ValueSet/medication-form-codes",
-        "code": "capsule",
-        "display": "Capsule"
+        "system": "http://www.snomed.org/sct",
+        "code": "420692007",
+        "display": "Oral capsule"
       }
     ]
   },

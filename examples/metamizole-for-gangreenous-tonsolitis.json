@@ -19,6 +19,12 @@
   },
   "status": "completed",
   "intent": "order",
+    "identifier": [
+    {
+      "system": "http://hospital.check.org/medication-requests",
+      "value": "MR-2025-0001"
+    }
+  ],
   "category": [
     {
       "coding": [

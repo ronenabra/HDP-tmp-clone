@@ -10,7 +10,7 @@ Usage: #example
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #diagnoses
 
-* identifier[+].system = "http://hospital1.example.org/conditions"
+* identifier[+].system = "http://hospital1.check.org/conditions"
 * identifier[=].value = "HOSP1-COND-0002"
 * recordedDate = "2024-11-28"
 

@@ -1,0 +1,52 @@
+{
+  "resourceType": "Observation",
+  "id": "hdp-chief-complaint-hospitalization",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "encounterInformation",
+        "display": "ביקורים"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient-reported-chief-complaint"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Chief complaint:</b> Fever, cough, and shortness of breath for two days.</p><p>Recorded at admission and linked to the hospitalization encounter.</p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital1.check.org/observations",
+      "value": "HOSP1-CC-ADM-2024-0001"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/il-hdp-patient",
+    "display": "HDP Patient with Israeli ID"
+  },
+  "encounter": {
+    "reference": "Encounter/hdp-hospitalization-hospital1",
+    "display": "Hospital1 Hospitalization"
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-md",
+      "display": "Dr. Greenfeld Diana"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "8661-1",
+        "system": "http://loinc.org",
+        "display": "Chief complaint - Reported"
+      }
+    ]
+  },
+  "status": "final",
+  "valueString": "Fever, cough, and shortness of breath for two days.",
+  "effectiveDateTime": "2024-11-28T08:20:00+02:00"
+}

@@ -1,0 +1,247 @@
+{
+  "resourceType": "Encounter",
+  "id": "hdp-segment-ward-a",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "encounterInformation",
+        "display": "ביקורים"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-inpatient-care-segment"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Segment:</b> Internal Ward A inpatient care.</p><p>Shows a transfer to a Ward B nursing unit and physical bed location during the stay.</p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital1.check.org/encounters",
+      "value": "HOSP1-WARDA-2024-0001"
+    }
+  ],
+  "statusHistory": [
+    {
+      "period": {
+        "start": "2024-11-28T15:30:00+02:00",
+        "end": "2024-12-02T12:00:00+02:00"
+      },
+      "status": "in-progress"
+    },
+    {
+      "period": {
+        "start": "2024-12-02T12:00:00+02:00",
+        "end": "2024-12-02T12:00:00+02:00"
+      },
+      "status": "finished"
+    }
+  ],
+  "classHistory": [
+    {
+      "period": {
+        "start": "2024-11-28T15:30:00+02:00",
+        "end": "2024-12-02T12:00:00+02:00"
+      },
+      "class": {
+        "code": "IMP",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "display": "inpatient encounter"
+      }
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-encounter-type",
+          "code": "inpatient-care-segment-hdp",
+          "display": "Inpatient care segment (HDP encounter type)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "1258986006",
+          "display": "Face-to-face encounter"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/il-hdp-patient",
+    "display": "ILHDP Patient"
+  },
+  "participant": [
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "PPRF",
+              "display": "primary performer"
+            }
+          ]
+        }
+      ],
+      "individual": {
+        "reference": "Practitioner/practitioner-md-ward-a",
+        "display": "Dr. Cohen Yael"
+      }
+    },
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "SPRF",
+              "display": "secondary performer"
+            }
+          ]
+        }
+      ],
+      "individual": {
+        "reference": "Practitioner/practitioner-nurse-ward-a",
+        "display": "Registered Nurse Leah Katz"
+      }
+    }
+  ],
+  "period": {
+    "start": "2024-11-28T15:30:00+02:00",
+    "end": "2024-12-02T12:00:00+02:00"
+  },
+  "serviceProvider": {
+    "reference": "Organization/hospital1-ward-a",
+    "display": "Hospital1 Internal Ward A"
+  },
+  "partOf": {
+    "reference": "Encounter/hdp-hospitalization-hospital1",
+    "display": "Hospital1 Hospitalization"
+  },
+  "location": [
+    {
+      "location": {
+        "reference": "Location/hospital1-ward-a-nu1",
+        "display": "Hospital1 Ward A Nursing Unit 1"
+      },
+      "period": {
+        "start": "2024-11-28T15:30:00+02:00",
+        "end": "2024-11-30T09:00:00+02:00"
+      },
+      "physicalType": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/il-core-location-physical-type",
+            "code": "hospital-nursing-unit",
+            "display": "Hospital nursing unit"
+          }
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "location": {
+        "reference": "Location/hospital1-ward-b-nu1",
+        "display": "Hospital1 Ward B Nursing Unit 1"
+      },
+      "period": {
+        "start": "2024-11-30T09:00:00+02:00",
+        "end": "2024-12-02T12:00:00+02:00"
+      },
+      "physicalType": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/il-core-location-physical-type",
+            "code": "hospital-nursing-unit",
+            "display": "Hospital nursing unit"
+          }
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "location": {
+        "reference": "Location/hospital1-ward-a-room-12-bed-2",
+        "display": "Ward A Room 12 Bed 2"
+      },
+      "period": {
+        "start": "2024-11-28T15:30:00+02:00",
+        "end": "2024-11-29T12:00:00+02:00"
+      },
+      "physicalType": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+            "code": "bd",
+            "display": "Bed"
+          }
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "location": {
+        "reference": "Location/hospital1-ward-b-room-05-bed-1",
+        "display": "Ward B Room 05 Bed 1"
+      },
+      "period": {
+        "start": "2024-11-29T12:00:00+02:00",
+        "end": "2024-12-02T12:00:00+02:00"
+      },
+      "physicalType": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+            "code": "bd",
+            "display": "Bed"
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/hdp-pneumonia",
+      "display": "Community acquired pneumonia"
+    }
+  ],
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/hdp-type-2-diabetes",
+        "display": "Type 2 diabetes mellitus"
+      },
+      "use": {
+        "coding": [
+          {
+            "code": "CM",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+          }
+        ]
+      },
+      "rank": 2
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "code": "IMP",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "inpatient encounter"
+  },
+  "serviceType": {
+    "coding": [
+      {
+        "code": "700232004",
+        "system": "http://snomed.info/sct",
+        "display": "General medical service"
+      }
+    ]
+  }
+}

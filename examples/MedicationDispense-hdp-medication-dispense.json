@@ -19,6 +19,12 @@
       "valueDateTime": "2024-05-21T14:00:00Z"
     }
   ],
+    "identifier": [
+    {
+      "system": "http://hospital.check.org/medication-dispenses",
+      "value": "MD-2025-0002"
+    }
+  ],
   "category": {
     "coding": [
       {

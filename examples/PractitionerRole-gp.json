@@ -39,7 +39,7 @@
     },
     {
       "system": "email",
-      "value": "DG@example.com"
+      "value": "DG@check.com"
     }
   ],
   "availableTime": [
@@ -51,5 +51,16 @@
   "organization": {
     "reference": "Organization/ministry-of-health"
   },
+  "code": [
+    {
+      "coding": [
+        {
+          "code": "1",
+          "system": "http://fhir.health.gov.il/cs/practitioner-role-moh",
+          "display": "רופא"
+        }
+      ]
+    }
+  ],
   "active": true
 }

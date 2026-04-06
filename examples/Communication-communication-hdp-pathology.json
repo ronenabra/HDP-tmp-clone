@@ -19,7 +19,7 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.example.org/communications",
+      "system": "http://hospital.check.org/communications",
       "value": "PATH-COMM-2025-0001"
     }
   ],

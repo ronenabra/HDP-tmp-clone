@@ -1,0 +1,81 @@
+{
+  "resourceType": "RelatedPerson",
+  "id": "guardian",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "patientDemographics",
+        "display": "דמוגרפיה"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-related-person"
+    ]
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "given",
+          "valueString": "John Doe Sr."
+        }
+      ],
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-administrative-parent-name"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.health.gov.il/identifier/il-national-id",
+      "value": "000000018"
+    }
+  ],
+  "relationship": [
+    {
+      "coding": [
+        {
+          "code": "GUARD",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "display": "Guardian"
+        }
+      ]
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Somebody"
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "en"
+        }
+      ],
+      "family": "Nice",
+      "use": "official"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+1-555-555-5555",
+      "use": "mobile"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "123 Main St"
+      ],
+      "city": "Somewhere",
+      "state": "CA",
+      "postalCode": "90210",
+      "country": "USA"
+    }
+  ],
+  "active": true,
+  "patient": {
+    "reference": "Patient/patient-with-israeli-id"
+  }
+}

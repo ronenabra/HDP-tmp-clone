@@ -13,6 +13,12 @@
       "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
     ]
   },
+  "identifier": [
+    {
+      "value": "burned-ear",
+      "system": "http://goodcare.org/conditions/id"
+    }
+  ],
   "category": [
     {
       "coding": [
@@ -69,7 +75,9 @@
   "verificationStatus": {
     "coding": [
       {
-        "code": "confirmed"
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display": "Confirmed"
       }
     ]
   },

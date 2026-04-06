@@ -9,9 +9,9 @@ Usage: #example
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #encounterInformation
-* meta.security[HDP].display = "Encounter information"
+* meta.security[HDP].display = "ביקורים"
 
-* identifier[+].system = "http://hospital1.example.org/observations"
+* identifier[+].system = "http://hospital1.check.org/observations"
 * identifier[=].value = "HOSP1-CC-ADM-2024-0001"
 
 * status = #final

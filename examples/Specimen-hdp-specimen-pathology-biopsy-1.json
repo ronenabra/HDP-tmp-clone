@@ -13,20 +13,6 @@
       "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-specimen-pathology"
     ]
   },
-  "extension": [
-    {
-      "url": "http://fhir.health.gov.il/StructureDefinition/ext-processing-location",
-      "valueReference": {
-        "reference": "Location/pathology-lab"
-      }
-    },
-    {
-      "url": "http://fhir.health.gov.il/StructureDefinition/ext-processing-practitioner",
-      "valueReference": {
-        "reference": "Practitioner/pathologist"
-      }
-    }
-  ],
   "identifier": [
     {
       "system": "http://specimen-ids.net/specimen-ids",
@@ -79,7 +65,21 @@
   },
   "processing": [
     {
-      "timeDateTime": "2020-12-06T12:35:00+03:00"
+      "extension": [
+        {
+          "url": "http://fhir.health.gov.il/StructureDefinition/ext-processing-location",
+          "valueReference": {
+            "reference": "Location/hmo-lab"
+          }
+        },
+        {
+          "url": "http://fhir.health.gov.il/StructureDefinition/ext-processing-practitioner",
+          "valueReference": {
+            "reference": "Practitioner/lab-tech"
+          }
+        }
+      ],
+      "timeDateTime": "2024-12-06T09:35:00+00:00"
     }
   ],
   "container": [

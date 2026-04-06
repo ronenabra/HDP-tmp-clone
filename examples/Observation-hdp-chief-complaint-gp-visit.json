@@ -1,0 +1,52 @@
+{
+  "resourceType": "Observation",
+  "id": "hdp-chief-complaint-gp-visit",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "encounterInformation",
+        "display": "ביקורים"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient-reported-chief-complaint"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Chief complaint:</b> \"Patient came in for diabetes follow-up and medication review. For the past week had increased thirst, waking at night to urinate, and mild fatigue. No fever, no chest pain, no shortness of breath.\"</p><p>Linked to the community/HMO ambulatory encounter for this visit.</p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hmo1.check.org/observations",
+      "value": "HMO1-CC-GP-2024-0001"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/il-hdp-patient",
+    "display": "ILHDP Patient"
+  },
+  "encounter": {
+    "reference": "Encounter/hdp-community-hmo-ambulatory-gp-visit",
+    "display": "HDP Community/HMO Ambulatory Encounter - GP Visit"
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-md",
+      "display": "Dr. Greenfeld Diana"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "8661-1",
+        "system": "http://loinc.org",
+        "display": "Chief complaint - Reported"
+      }
+    ]
+  },
+  "status": "final",
+  "valueString": "Patient came in for diabetes follow-up and medication review. For the past week had increased thirst, waking at night to urinate, and mild fatigue. No fever, no chest pain, no shortness of breath.",
+  "effectiveDateTime": "2024-11-28T09:30:00+02:00"
+}

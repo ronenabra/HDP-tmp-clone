@@ -17,6 +17,12 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">500mg paracetamol, manufactured by TEVA pharma.</div>",
     "status": "generated"
   },
+    "identifier": [
+    {
+      "system": "http://hospital.check.org/medications",
+      "value": "MED-2025-0001"
+    }
+  ],
   "code": {
     "coding": [
       {

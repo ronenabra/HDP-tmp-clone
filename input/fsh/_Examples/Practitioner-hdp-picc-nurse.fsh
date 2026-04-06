@@ -16,6 +16,8 @@ Usage: #example
 * identifier[=].value = "22222"
 
 * active = true
-* name[+].family = "Levi"
-* name[=].given[+] = "Maya"
-* name[=].prefix[+] = "RN"
+* name[English].family = "Levi"
+* name[English].given[+] = "Maya"
+* name[English].prefix[+] = "RN"
+* name[English].extension[language].valueCode = #en
+

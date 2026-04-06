@@ -28,6 +28,12 @@
     "status": "generated"
   },
   "status": "completed",
+    "identifier": [
+    {
+      "system": "http://hospital.check.org/medication-administrations",
+      "value": "MA-2025-0001"
+    }
+  ],
   "category": {
     "coding": [
       {

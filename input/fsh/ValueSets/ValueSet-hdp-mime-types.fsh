@@ -6,6 +6,7 @@ rich text, and CDA"
 * ^status = #active
 * ^experimental = false
 * ^url = $vs-hdp-doc-mime-types
+* insert ConformanceMetadata
 
 // 🟦 General documents
 * include $hdp-mime-types#"application/pdf" "PDF document"
@@ -36,5 +37,4 @@ rich text, and CDA"
 * include $hdp-mime-types#"text/rtf" "RTF text"
 
 // 🟪 CDA
-* insert ConformanceMetadata
 * include $hdp-mime-types#"application/cda+xml" "HL7 Clinical Document Architecture (CDA) XML"

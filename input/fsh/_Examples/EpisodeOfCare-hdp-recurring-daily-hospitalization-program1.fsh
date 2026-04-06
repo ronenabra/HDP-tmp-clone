@@ -9,9 +9,9 @@ Usage: #example
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #encounterInformation
-* meta.security[HDP].display = "Encounter information"
+* meta.security[HDP].display = "ביקורים"
 
-* identifier[+].system = "http://hospital1.example.org/episodes"
+* identifier[+].system = "http://hospital1.check.org/episodes"
 * identifier[=].value = "HOSP1-RDH-2024-0001"
 
 * status = #finished
@@ -23,7 +23,7 @@ Usage: #example
 * statusHistory[=].period.end = "2024-12-31"
 
 * type[recurring-daily-hospitalization].coding[+] = http://fhir.health.gov.il/cs/il-core-episode-of-care-type#recurring-daily-hospitalization "Recurring daily hospitalization"
-* type[serviceType].coding[+] = $sct#310129007 "Rehabilitation service"
+// * type[serviceType].coding[+] = $sct#310129007 "Rehabilitation service"
 
 * patient.reference = "Patient/il-hdp-patient"
 * patient.display = "ILHDP Patient"

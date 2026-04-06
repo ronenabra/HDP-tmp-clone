@@ -8,7 +8,12 @@ Description: "HDP wrapper for patient-reported chief complaint observation with 
 * insert ConformanceMetadata
 * ^status = #draft
 
-* insert HDPInformationBucketSecurity
+* meta only ILHDPMeta
+* meta 1..1
+* meta.security[HDP].system = $info-buckets (exactly)
+* meta.security[HDP].code = #encounterInformation (exactly)
+* meta.security[HDP].display = "ביקורים" (exactly)
+
 * identifier 1..*
 
 * basedOn only Reference(ILCoreCarePlan or ILCoreDeviceRequest or ILCoreImmunizationRecommendation or ILCoreMedicationRequest or ILCoreNutritionOrder or ILCoreServiceRequest or $ILHDPServiceRequest)

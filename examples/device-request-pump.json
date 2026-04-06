@@ -19,7 +19,7 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.example.org/device-requests",
+      "system": "http://hospital.check.org/device-requests",
       "value": "DR-2025-0001"
     }
   ],

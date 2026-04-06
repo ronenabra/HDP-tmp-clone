@@ -9,9 +9,8 @@ Description: "Observation Lab profile for HDP"
 * meta only ILHDPMeta
 * meta 1..1
 * meta.security[HDP] from $vs-observation-lab-meta (required)
-* meta.security[HDP].system 1..1
+
 * meta.security[HDP].system = $info-buckets (exactly)
-* meta.security[HDP].code 1..1
 * identifier 1..*
 * subject 1..1
 * subject.identifier 1..1

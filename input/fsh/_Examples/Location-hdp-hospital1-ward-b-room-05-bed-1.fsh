@@ -10,10 +10,11 @@ Usage: #example
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #organization
 
-* identifier[+].system = "http://hospital1.example.org/locations"
+* identifier[+].system = "http://hospital1.check.org/locations"
 * identifier[=].value = "HOSP1-WARD-B-R05-B1"
 
 * status = #active
 * name = "Ward B Room 05 Bed 1"
 * mode = #instance
 * managingOrganization.reference = "Organization/hospital1-ward-b"
+* address.line[+] = "Rambam Hospital, Haifa"

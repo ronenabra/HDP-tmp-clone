@@ -9,9 +9,9 @@ Usage: #example
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #encounterInformation
-* meta.security[HDP].display = "Encounter information"
+* meta.security[HDP].display = "ביקורים"
 
-* identifier[+].system = "http://hospital1.example.org/encounters"
+* identifier[+].system = "http://hospital1.check.org/encounters"
 * identifier[=].value = "HOSP1-PICC-2024-0001"
 
 * status = #finished
@@ -58,9 +58,9 @@ Usage: #example
 * location[=].status = #completed
 * location[=].period.start = "2024-11-30T10:00:00+02:00"
 * location[=].period.end = "2024-11-30T10:45:00+02:00"
-* location[=].physicalType.coding[+].system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
-* location[=].physicalType.coding[=].code = #wa
-* location[=].physicalType.coding[=].display = "Ward"
+* location[=].physicalType.coding[+].system = $il-core-location-physical-type
+* location[=].physicalType.coding[=].code = #hospital-nursing-unit
+* location[=].physicalType.coding[=].display = "Hospital nursing unit"
 
 * reasonCode[+].coding[+] = $sct#425196008 "Insertion of peripherally inserted central catheter (procedure)"
 * reasonCode[=].text = "PICC line insertion procedure"

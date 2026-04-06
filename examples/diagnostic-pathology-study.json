@@ -14,6 +14,12 @@
     ]
   },
   "status": "final",
+  "identifier": [
+    {
+      "system": "http://hospital.check.org/pathology-study-id",
+      "value": "PS-2025-0001"
+    }
+  ],
   "code": {
     "coding": [
       {

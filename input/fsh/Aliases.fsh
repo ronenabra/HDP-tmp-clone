@@ -1,6 +1,8 @@
 // extensions
 Alias: $effective =    http://hl7.org/fhir/StructureDefinition/codesystem-effectiveDate
 Alias: $ext-processing-practitioner =  http://fhir.health.gov.il/StructureDefinition/ext-processing-practitioner
+Alias: $ext-language =                  http://hl7.org/fhir/StructureDefinition/language
+
 // Alias: $ext-processing-practitioner =  http://fhir.health.gov.il/StructureDefinition/ext-hdp-processing-practitioner
 Alias: $ext-processing-location =  http://fhir.health.gov.il/StructureDefinition/ext-processing-location
 Alias: $ext-specimen-collector-reference =  http://fhir.health.gov.il/StructureDefinition/ext-hdp-specimen-collector-reference
@@ -71,6 +73,8 @@ Alias: $patient-release-type-moh                     = http://fhir.health.gov.il
 Alias: $patient-visit-reason-moh                     = http://fhir.health.gov.il/cs/patient-visit-reason-moh
 Alias: $v3-ActCode                                   = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $hdp-mime-types =  urn:ietf:bcp:13
+Alias: $il-core-location-physical-type =            http://fhir.health.gov.il/cs/il-core-location-physical-type
+
 
 // ValueSets
 Alias: $vs-il-core-diagnosis-role                    = http://fhir.health.gov.il/ValueSet/il-core-diagnosis-role

@@ -1,0 +1,48 @@
+{
+  "resourceType": "Practitioner",
+  "id": "practitioner-nurse-picc",
+  "meta": {
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-practitioner"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "practitioner",
+        "display": "מטפל"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Registered Nurse Maya Levi</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://practitioners.health.gov.il/Nurses",
+      "value": "22222"
+    },
+    {
+      "system": "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh",
+      "value": "gH4#%(1a"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Maya"
+      ],
+      "prefix": [
+        "RN"
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "en"
+        }
+      ],
+      "family": "Levi"
+    }
+  ],
+  "active": true
+}

@@ -16,7 +16,7 @@ Description: "Demonstrates ILHDP Device profile with required meta, identifiers,
 * modelNumber = "IP-2025"
 * serialNumber = "SN-987654321"
 
-* type = $sct#706172005 "Ventilator (physical object)"
+* type = $sct#430033006 "Infusion Pump (physical object)"
 
 * identifier[0].system = "http://hospital.hospitalia.org/devices"
 * identifier[0].value = "DEV-2025-0001"

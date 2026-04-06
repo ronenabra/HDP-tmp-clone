@@ -11,8 +11,8 @@ Description: "Demonstrates ILHDP Observation profile with meta, identifiers, sub
 """
 
 * meta.security[HDP].system = $info-buckets
-* meta.security[HDP].code = #assessments
-* meta.security[HDP].display = "אומדנים"
+* meta.security[HDP].code = #laboratoryTests
+* meta.security[HDP].display = "בדיקות מעבדה"
 
 * identifier[0].system = "http://hospital.hospitaliala.org/observations"
 * identifier[0].value = "OBS-2025-0001"

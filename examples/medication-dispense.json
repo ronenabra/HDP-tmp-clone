@@ -20,6 +20,12 @@
     }
   ],
   "status": "completed",
+  "identifier": [
+    {
+      "system": "http://hospital.check.org/medication-dispenses",
+      "value": "MD-2025-0001"
+    }
+  ],
   "category": {
     "coding": [
       {

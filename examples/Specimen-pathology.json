@@ -80,7 +80,7 @@
         {
           "url": "http://fhir.health.gov.il/StructureDefinition/ext-processing-practitioner",
           "valueReference": {
-            "reference": "Practitioner/lab tech"
+            "reference": "Practitioner/lab-tech"
           }
         }
       ],

@@ -15,6 +15,7 @@
   },
   "identifier": [
     {
+      "system": "http://hospital.check.org/service-requests",
       "value": "SR12345"
     }
   ],
@@ -44,7 +45,7 @@
     {
       "coding": [
         {
-          "version": "http://snomed.info/sct/731000124108",
+          "version": "http://snomed.info/sct/",
           "code": "386663009",
           "system": "http://snomed.info/sct",
           "display": "Bicycle accident (event)"

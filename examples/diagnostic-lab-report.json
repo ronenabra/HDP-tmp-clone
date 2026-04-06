@@ -13,6 +13,12 @@
           "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-diagnostic-report"
       ]
   },
+  "identifier": [
+    {
+      "system": "http://goodcare.org/labs-tests/id",
+      "value": "12345"
+    }
+  ],
   "status": "final",
   "category": [
     {
