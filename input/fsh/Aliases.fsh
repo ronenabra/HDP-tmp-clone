@@ -71,6 +71,7 @@ Alias: $il-core-resource-role-context                = http://fhir.health.gov.il
 Alias: $institution-type-moh                         = http://fhir.health.gov.il/cs/institution-type-moh
 Alias: $patient-release-type-moh                     = http://fhir.health.gov.il/cs/patient-release-type-moh
 Alias: $patient-visit-reason-moh                     = http://fhir.health.gov.il/cs/patient-visit-reason-moh
+Alias: $v3-RoleCode                                  = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $v3-ActCode                                   = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $hdp-mime-types =  urn:ietf:bcp:13
 Alias: $il-core-location-physical-type =            http://fhir.health.gov.il/cs/il-core-location-physical-type

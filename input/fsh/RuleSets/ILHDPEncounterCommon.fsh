@@ -75,17 +75,15 @@ RuleSet: ILHDPEncounterCommon
 * diagnosis.use ^comment = "SHOULD be used to indicate diagnosis role (i.e. - chief complaint, comorbidity, etc.)"
 * diagnosis.rank ^comment = "SHOULD be used to indicate relative rank of diagnosis within each role (use)"
 
-* location ^slicing.discriminator.type = #value
-* location ^slicing.discriminator.path = "physicalType.coding.code"
+* location ^slicing.discriminator.type = #pattern
+* location ^slicing.discriminator.path = "physicalType"
 * location ^slicing.rules = #open
 * location contains nursing-unit 0..*
 * location[nursing-unit] ^short = "Nursing unit location"
-* location[nursing-unit] ^definition = "Nursing unit/ward location for the encounter."
-// * location[nursing-unit].physicalType ^patternCoding.system = $il-core-location-physical-type
-// * location[nursing-unit].physicalType ^patternCoding.code = #hospital-nursing-unit
-* location[nursing-unit].physicalType.coding.code = #hospital-nursing-unit (exactly)
-// * location[nursing-unit].physicalType.coding.system = $il-core-location-physical-type
-// * location[nursing-unit].physicalType.coding.code = #hospital-nursing-unit
+* location[nursing-unit] ^definition = "Encounter location entry representing the nursing-unit context for the encounter."
+* location[nursing-unit].physicalType ^patternCodeableConcept.coding.system = $il-core-location-physical-type
+* location[nursing-unit].physicalType ^patternCodeableConcept.coding.code = #hospital-nursing-unit
+
 * location[nursing-unit].location only Reference(ILCoreLocationNursingUnit or ILHDPLocationNursingUnit)
 
 * identifier ^alias[0] = "מזהה ביקור"

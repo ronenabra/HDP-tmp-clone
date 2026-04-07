@@ -1,6 +1,10 @@
 # HDP Community/HMO Ambulatory Encounter - GP Visit (Example)
 This example demonstrates a simple, face-to-face GP visit in a community/HMO clinic using the ILHDP community/ambulatory encounter profile.
 
+## See also
+- [ILHDP Encounter Community/HMO Ambulatory](./StructureDefinition-il-hdp-encounter-community-hmo-ambulatory.doc.md)
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially section 1.
+
 ## Key points
 - **Profile**: `ILHDPEncounterCommunityHMOAmbulatory`.
 - **Encounter identity**: `identifier` is populated with an HMO-specific system/value for traceability.
@@ -19,3 +23,6 @@ This example demonstrates a simple, face-to-face GP visit in a community/HMO cli
 - **Organization**: `Organization/HMO1`
 - **Condition**: `Condition/type-1-diabetes`
 - **Chief complaint**: `Observation/hdp-chief-complaint-gp-visit`
+
+## Related examples
+- [Chief complaint in community/HMO context](./Observation-hdp-chief-complaint-gp-visit.doc.md)

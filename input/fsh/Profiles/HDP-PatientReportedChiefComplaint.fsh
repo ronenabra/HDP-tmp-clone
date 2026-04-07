@@ -2,7 +2,7 @@ Profile: ILHDPPatientReportedChiefComplaint
 Parent: ILCorePatientReportedChiefComplaint
 Id: il-hdp-patient-reported-chief-complaint
 Title: "ILHDP Patient Reported Chief Complaint Profile"
-Description: "HDP wrapper for patient-reported chief complaint observation with security tagging"
+Description: "HDP constraints for patient-reported chief complaint observation with security tagging. Intended for use as the target of Encounter.reasonReference[patient-reported-chief-complaint] in HDP encounters."
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient-reported-chief-complaint"
 * insert ConformanceMetadata

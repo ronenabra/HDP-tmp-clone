@@ -1,6 +1,10 @@
 # HDP Inpatient Care Segment - PICC Line Insertion (Example)
 This example models a short, event-based segment for a PICC line insertion during the inpatient stay.
 
+## See also
+- [ILHDP Encounter Inpatient Care Segment](./StructureDefinition-il-hdp-encounter-inpatient-care-segment.doc.md)
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially sections 2.1 and 2.5.
+
 ## Key points
 - **Profile**: `ILHDPEncounterInpatientCareSegment`.
 - **Class and type**: Inpatient class (`IMP`) with required `type[inpatient-care-segment]`.
@@ -8,7 +12,7 @@ This example models a short, event-based segment for a PICC line insertion durin
 - **Participants**: Primary performer is a nurse; secondary performer physician is also recorded.
 - **Service provider**: Ward A organizational unit remains the service provider for the event.
 - **Location**: Uses a single nursing-unit entry (Ward A Nursing Unit 2) with a short period.
-- **Physical type**: `location[nursing-unit].physicalType` is set to ward (`wa`).
+- **Physical type**: `location[nursing-unit].physicalType` is set to `il-core-location-physical-type#hospital-nursing-unit`.
 - **Reason**: `reasonCode` uses SNOMED CT `425196008` for PICC insertion.
 
 ## References in this example

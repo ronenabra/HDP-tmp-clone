@@ -2,7 +2,7 @@ Profile: ILHDPEpisodeOfCareRecurringDailyHospitalization
 Parent: ILHDPEpisodeOfCare
 Id: il-hdp-episode-of-care-recurring-daily-hospitalization
 Title: "ILHDP EpisodeOfCare Recurring Daily Hospitalization"
-Description: "EpisodeOfCare profile for recurring day-hospitalization programs, where each treatment day may include multiple clinical encounters and the patient leaves the hospital at the end of the day."
+Description: "EpisodeOfCare profile for recurring day-hospitalization programs spanning multiple treatment days. Individual daily encounters are linked to this EpisodeOfCare, while the patient leaves the hospital at the end of each treatment day."
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-episode-of-care-recurring-daily-hospitalization"
 * insert ConformanceMetadata

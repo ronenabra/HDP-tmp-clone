@@ -4,6 +4,9 @@ Community or ambulatory encounter that is typically self-contained.
 ## Canonical
 [http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory](http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory)
 
+## See also
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially section 1 on community/HMO/ambulatory visits.
+
 ## Guidance
 - Required type slice: `type[community-hmo-ambulatory]` with code `il-core-encounter-type#community-hmo-ambulatory-hdp`.
 - `partOf` must be absent; use `EpisodeOfCare` to group related visits.
@@ -18,3 +21,7 @@ Community or ambulatory encounter that is typically self-contained.
 - Participant slices for `consultant` and `reffering-practitioner` are inherited from ILCoreEncounter; `participant.individual` allows ILCore + HDP practitioner/practitionerRole/relatedPerson references.
 - `subject` references only the HDP Patient profile.
 - Enforce encounter reason and period invariants from ILHDP encounter rules.
+
+## Related examples
+- [Community/HMO GP visit example](./Encounter-hdp-community-hmo-ambulatory-gp-visit.doc.md)
+- [Chief complaint in community/HMO context](./Observation-hdp-chief-complaint-gp-visit.doc.md)

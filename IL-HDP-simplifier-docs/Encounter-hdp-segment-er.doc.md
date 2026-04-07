@@ -1,6 +1,10 @@
 # HDP Inpatient Care Segment - ER Evaluation (Example)
 This example models the emergency department segment that precedes admission to the inpatient ward.
 
+## See also
+- [ILHDP Encounter Inpatient Care Segment](./StructureDefinition-il-hdp-encounter-inpatient-care-segment.doc.md)
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially section 2.
+
 ## Key points
 - **Profile**: `ILHDPEncounterInpatientCareSegment`.
 - **Class and type**: `class` is `EMER` and `type[inpatient-care-segment]` is fixed to `il-core-encounter-type#inpatient-care-segment-hdp`.

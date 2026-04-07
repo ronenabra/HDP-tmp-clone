@@ -1,6 +1,11 @@
 # HDP Supplemental Encounter - Ward A Admission (Example)
 This example shows how to capture admission-stage workflow details using the supplemental encounter profile.
 
+## See also
+- [ILHDP Encounter Supplemental](./StructureDefinition-il-hdp-encounter-supplemental.doc.md)
+- [Ext: Resource Role Context](./StructureDefinition-ext-resource-role-context.doc.md)
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially sections 5 and 6.
+
 ## Key points
 - **Profile**: `ILHDPEncounterSupplemental`.
 - **Type**: Uses the fixed `type[supplemental-encounter]` with `il-core-encounter-type#supplemental-encounter-hdp`.
@@ -13,3 +18,6 @@ This example shows how to capture admission-stage workflow details using the sup
 - **Parent encounter**: `Encounter/hdp-segment-ward-a`
 - **Patient**: `Patient/il-hdp-patient`
 - **Organization**: `Organization/hospital1-ward-a`
+
+## Related examples
+- [Admission BP observation example](./Observation-hdp-bp-admission-ward-a.doc.md)

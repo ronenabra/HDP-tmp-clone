@@ -2,7 +2,7 @@ Profile: ILHDPEncounterSupplemental
 Parent: ILCoreEncounter
 Id: il-hdp-encounter-supplemental
 Title: "ILHDP Encounter Supplemental Profile"
-Description: "Supplemental encounter profile used to capture additional encounter context in HDP flows."
+Description: "Supplemental encounter profile for optional additional encounter context in HDP flows. This profile is intentionally minimally constrained beyond identification as supplemental, so organizations can represent richer native encounter structures without making consumers dependent on them."
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-supplemental"
 * insert ConformanceMetadata
