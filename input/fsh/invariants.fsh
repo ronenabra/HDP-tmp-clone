@@ -78,3 +78,7 @@ Invariant: ilhdp-enc-face-to-face-exclusive
 Description: "Face-to-face encounter type SHALL NOT be combined with virtual or without-patient-present types."
 Severity: #error
 Expression: "type.coding.where(system='http://snomed.info/sct' and code='1258986006').exists() implies (type.coding.where($this.memberOf('http://fhir.health.gov.il/ValueSet/il-core-virtual-type')).exists().not() and type.coding.where(system='http://fhir.health.gov.il/cs/il-core-encounter-type' and code='without-patient-present').exists().not())"
+Invariant: ilhdp-enc-one-active-nursing-unit
+Description: "No more than one active nursing-unit location entry is allowed at a time."
+Severity: #error
+Expression: "location.where(physicalType.coding.where(system='http://fhir.health.gov.il/cs/il-core-location-physical-type' and code='hospital-nursing-unit').exists() and status = 'active').count() <= 1"

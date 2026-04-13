@@ -1,6 +1,10 @@
 # HDP Hospitalization Encounter - Hospital1 (Example)
 This example represents the top-level hospitalization encounter for a patient admitted with pneumonia. It anchors ER and ward segments via child encounters.
 
+## See also
+- [ILHDP Encounter Hospitalization](./StructureDefinition-il-hdp-encounter-hospitalization.doc.md)
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially section 2.
+
 ## Key points
 - **Profile**: `ILHDPEncounterHospitalization`.
 - **Encounter identity**: `identifier` represents the admission encounter ID in the hospital system.

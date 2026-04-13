@@ -2,7 +2,7 @@ Profile: ILHDPEncounterInpatientCareSegment
 Parent: ILCoreEncounter
 Id: il-hdp-encounter-inpatient-care-segment
 Title: "ILHDP Encounter Inpatient Care Segment Profile"
-Description: "Child encounter representing a distinct period or event within the overall hospitalization. In most cases it denotes care by a specific clinical unit (e.g., ER, internal medicine ward, orthopedics), but it MAY also represent a significant event during care (e.g., emergency surgical intervention, resuscitation, specialist consultation, imaging procedure). When representing care by a clinical unit, this encounter SHALL reference the top-level ILHDPEncounterHospitalization via partOf. When representing a significant event, this encounter SHALL reference either the top-level ILHDPEncounterHospitalization or the relevant ILHDPEncounterInpatientCareSegment via partOf. It is recommended to link significant-event encounters to the segment representing the responsible clinical unit. This profile captures both the clinical unit providing care (serviceProvider) and the nursing unit/physical location (location). A new segment encounter SHALL be created when the clinical unit (serviceProvider) changes (e.g., transfer). If only the nursing unit/bed changes, a new encounter SHALL NOT be created; update location and/or location:nursing-unit instead. The choice of what constitutes a 'significant event' is left to the organization; however, to avoid overwhelming consumers, create event segments only for clinically meaningful events where associating participants and artifacts (Conditions, Observations, Medications, Procedures, etc.) to that event is important."
+Description: "Child encounter representing a clinically coherent care segment or significant event within a hospitalization. In most cases it represents care by a specific clinical unit (e.g., ER, internal medicine, orthopedics), but it MAY also represent a significant event such as an emergency intervention, resuscitation, specialist consultation, or imaging procedure. When representing care by a clinical unit, this encounter SHALL reference the top-level ILHDPEncounterHospitalization via partOf. When representing a significant event, this encounter SHALL reference either the top-level ILHDPEncounterHospitalization or the relevant ILHDPEncounterInpatientCareSegment via partOf. It is recommended to link significant-event encounters to the segment representing the responsible clinical unit. This profile distinguishes the responsible clinical unit (serviceProvider) from nursing-unit and physical location context (location). A new segment encounter SHALL be created when clinical responsibility changes. If only the nursing unit, room, or bed changes, a new encounter SHALL NOT be created; location history SHOULD be updated instead. The choice of what constitutes a 'significant event' is left to the organization; however, to avoid overwhelming consumers, create event segments only for clinically meaningful events where associating participants and artifacts (Conditions, Observations, Medications, Procedures, etc.) to that event is important."
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-inpatient-care-segment"
 * insert ConformanceMetadata
@@ -11,6 +11,7 @@ Description: "Child encounter representing a distinct period or event within the
 * insert ILHDPEncounterCommon
 * obeys ilhdp-enc-period-start
 * obeys ilhdp-enc-finished-period
+* obeys ilhdp-enc-one-active-nursing-unit
 
 * status ^comment = "Status of child encounters SHALL be harmonized with the status of parent encounter (e.g. - child encounter cannot be in-progress when parent encounter is finished, etc.)"
 * statusHistory ^comment = "חשוב למימוש. If status history is managed for Inpatient Care Segment encounters it SHOULD be reflected here."
@@ -26,7 +27,7 @@ Description: "Child encounter representing a distinct period or event within the
 * type[without-patient-present] 0..1
 * type[face-to-face] 0..1
 
-* serviceType ^comment = "If there are no better options - SHOULD be inferred from the clinical type of the ward. For specialist consultation - if there are no better options infer from practitioner specialization or ward they are assigned to. SHOULD NOT change for this type of encounter."
+* serviceType ^comment = "If there are no better options - SHOULD be inferred from the clinical type of the ward. For specialist consultation - if there are no better options infer from practitioner specialization or ward they are assigned to. SHOULD NOT change within a given segment encounter."
 
 * participant 1..*
 * participant ^comment = "Care segment encounter SHALL include all participating practitioners or practitioner roles directly involved in care during that segment."
@@ -71,11 +72,11 @@ Description: "Child encounter representing a distinct period or event within the
 * hospitalization.dischargeDisposition ^alias[0] = "לאן שוחרר המטופל"
 * hospitalization.dischargeDisposition ^comment = "חשוב למימוש"
 * location ^alias[0] = "מיקום הביקור"
-* location ^comment = "SHALL include nursing unit. SHOULD include physical location (building/floor/room/bed/etc.) - as detailed as possible. MAY include references to multiple locations (e.g. - building, floor, room and nursing unit) If transferred between locations - history SHALL be kept (i.e.- status, period)"
+* location ^comment = "SHALL include nursing-unit entry. SHOULD also include additional physical locations (building, floor, room, bed, etc.) when known. Multiple location entries MAY be present (e.g. - building, floor, room and nursing unit). When the patient is transferred between nursing units or physical locations, prior entries SHOULD be retained with appropriate status and period."
 * location.status ^comment = "SHOULD be populated."
 * location.physicalType ^comment = "SHOULD be populated for physical location types."
 * location[nursing-unit] ^alias[0] = "מעברים בין מחלקות/יחידת סיעוד"
-* location[nursing-unit] ^comment = "עבור אשפוזים - SHALL be nursing org unit providing care during this segment."
+* location[nursing-unit] ^comment = "For hospitalization flows (אשפוזים), SHALL represent the nursing-unit context for this segment. This does not replace serviceProvider, which identifies the responsible clinical unit."
 * location[nursing-unit].status ^comment = "SHALL be populated if transferred between locations, SHOULD be populated otherwise. SHALL have only one nursing unit with status=active at any time."
 * location[nursing-unit].period ^comment = "SHALL be populated if transferred between locations, SHOULD be populated otherwise
 SHALL be consistent with Encounter.period."
@@ -83,4 +84,4 @@ SHALL be consistent with Encounter.period."
 * period ^comment = "If status is finished then either period.end or Encounter.length SHALL be populated. If exact time is not known only the date component SHOULD be populated. Times SHALL be harmonized with parent encounter (i.e. - cannot start after parent end or start before parent start, etc.)"
 * period.start ^comment = "SHALL be populated if status is not planned."
 
-* serviceProvider ^comment = "SHALL be clinical org unit. If transferred to another clinical unit new segment encounter SHALL be created."
+* serviceProvider ^comment = "SHALL identify the clinical organizational unit responsible for care during this segment. Transfer of clinical responsibility to another unit SHALL create a new segment encounter."

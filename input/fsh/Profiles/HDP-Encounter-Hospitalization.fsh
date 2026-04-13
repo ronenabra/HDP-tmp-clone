@@ -2,7 +2,7 @@ Profile: ILHDPEncounterHospitalization
 Parent: ILCoreEncounter
 Id: il-hdp-encounter-hospitalization
 Title: "ILHDP Encounter Hospitalization Profile"
-Description: "Top-level hospitalization encounter representing the patient's overall stay, capturing high-level clinical and administrative information. It MAY be used for ambulatory visits if they are managed as a hierarchy in the source system, however, use of ILHDPEncounterCommunityHMOAmbulatory is preferred for simplicity. The combination of ILHDPEncounterHospitalization and ILHDPEncounterInpatientCareSegment SHALL cover all hospitalization scenarios, including general inpatient care, home hospitalization, geriatric, and psychiatric settings. Visits to HMO-operated/community emergency centers MAY be represented either with the hospitalization + inpatient-segment combination (for structured flows) or with ILHDPEncounterCommunityHMOAmbulatory when a simpler, 'flat' representation better reflects the source system."
+Description: "Top-level encounter in the HDP hierarchical hospitalization model. Represents the patient's overall stay and carries high-level clinical and administrative context. The combination of ILHDPEncounterHospitalization and ILHDPEncounterInpatientCareSegment SHALL cover hospitalization scenarios including general inpatient care, home hospitalization, geriatric care, and psychiatric care. This profile MAY also be used for ambulatory or HMO-operated/community emergency-center visists when the source system models them hierarchically; otherwise ILHDPEncounterCommunityHMOAmbulatory is preferred."
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-hospitalization"
 * insert ConformanceMetadata

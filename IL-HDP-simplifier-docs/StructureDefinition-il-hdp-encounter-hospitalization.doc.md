@@ -4,6 +4,9 @@ Top-level hospitalization encounter representing the patient's overall stay, cap
 ## Canonical
 [http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-hospitalization](http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-hospitalization)
 
+## See also
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially section 2 on hospitalization and hierarchical encounter flows.
+
 ## Guidance
 - Use for the aggregated hospitalization stay. It MAY be used for ambulatory visits when they are modeled as a hierarchy in the source system; ILHDPEncounterCommunityHMOAmbulatory is preferred for simpler ambulatory flows.
 - Required type slice: `type[hospitalization]` with code `il-core-encounter-type#hospitalization-hdp`.
@@ -16,3 +19,9 @@ Top-level hospitalization encounter representing the patient's overall stay, cap
 - `type[face-to-face]` SHALL NOT be combined with `type[virtual-encounters]` or `type[without-patient-present]`.
 - Participant slices for `consultant` and `reffering-practitioner` are inherited from ILCoreEncounter; `participant.individual` allows ILCore + HDP practitioner/practitionerRole/relatedPerson references.
 - `subject` references only the HDP Patient profile.
+
+## Related examples
+- [Hospitalization example](./Encounter-hdp-hospitalization-hospital1.doc.md)
+- [ER segment example](./Encounter-hdp-segment-er.doc.md)
+- [Ward A segment example](./Encounter-hdp-segment-ward-a.doc.md)
+- [PICC event segment example](./Encounter-hdp-segment-picc.doc.md)

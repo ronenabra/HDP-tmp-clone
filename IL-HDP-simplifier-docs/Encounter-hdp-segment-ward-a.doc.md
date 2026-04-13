@@ -1,6 +1,10 @@
 # HDP Inpatient Care Segment - Internal Ward A (Example)
 This example represents the inpatient ward segment, including a nursing-unit transfer and bed-level location history.
 
+## See also
+- [ILHDP Encounter Inpatient Care Segment](./StructureDefinition-il-hdp-encounter-inpatient-care-segment.doc.md)
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially sections 2.2, 2.3, and 2.5.
+
 ## Key points
 - **Profile**: `ILHDPEncounterInpatientCareSegment`.
 - **Class and type**: Inpatient class (`IMP`) with required `type[inpatient-care-segment]`.
@@ -13,7 +17,9 @@ This example represents the inpatient ward segment, including a nursing-unit tra
 - **Physical bed history**:
   - `location` entries reference specific beds/rooms with periods.
   - Demonstrates how bed moves are modeled without creating new segment encounters.
-- **Physical type**: `location.physicalType` uses HL7 physical type codes for bed locations.
+- **Physical type**:
+  - `location[nursing-unit].physicalType` uses `il-core-location-physical-type#hospital-nursing-unit` to identify the nursing-unit slice.
+  - bed entries use HL7 location physical type codes.
 - **Reason and diagnoses**:
   - `reasonReference` points to pneumonia.
   - `diagnosis[comorbidity]` references diabetes.

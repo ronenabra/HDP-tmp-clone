@@ -1,6 +1,11 @@
 # HDP Vital Signs - Admission Blood Pressure (Example)
 This example captures an admission blood pressure observation recorded during the Ward A inpatient segment.
 
+## See also
+- [Ext: Resource Role Context](./StructureDefinition-ext-resource-role-context.doc.md)
+- [ILHDP Encounter Supplemental](./StructureDefinition-il-hdp-encounter-supplemental.doc.md)
+- [ILHDP Encounter IG](./ILHDP-Encounter-IG.md), especially sections 6 and 9.
+
 ## Key points
 - **Profile**: `ILCoreBP`.
 - **Category and code**: Vital signs category with LOINC `85354-9`.

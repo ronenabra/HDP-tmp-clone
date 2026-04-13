@@ -23,7 +23,7 @@ Usage: #example
 * statusHistory[=].period.end = "2024-12-31"
 
 * type[recurring-daily-hospitalization].coding[+] = http://fhir.health.gov.il/cs/il-core-episode-of-care-type#recurring-daily-hospitalization "Recurring daily hospitalization"
-// * type[serviceType].coding[+] = $sct#310129007 "Rehabilitation service"
+* type[serviceType].coding[+] = $sct#310129007 "Rehabilitation service"
 
 * patient.reference = "Patient/il-hdp-patient"
 * patient.display = "ILHDP Patient"

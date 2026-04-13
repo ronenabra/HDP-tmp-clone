@@ -1,7 +1,7 @@
 Instance: hdp-pneumonia
 InstanceOf: ILHDPCondition
 Title: "HDP Condition - Community Acquired Pneumonia"
-Description: "Primary admission diagnosis for the hospitalization check."
+Description: "Primary admission diagnosis for the hospitalization example."
 Usage: #example
 
 * text.status = #generated
